@@ -12,7 +12,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@0.33.1
+        uses: aquasecurity/trivy-action@v0.35.0
         with:
           image-ref: 'public.ecr.aws/mycfsg/cypress:latest'
           format: 'table'
@@ -20,7 +20,7 @@ jobs:
           ignore-unfixed: true
           vuln-type: 'os,library'
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@0.33.1
+        uses: aquasecurity/trivy-action@v0.35.0
         with:
           image-ref: 'public.ecr.aws/mycfsg/cypress:15.13.0_chrome-145.0.7632.159-1_node-20.18.1'
           format: 'table'
